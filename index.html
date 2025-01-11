@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soyam's Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #0b132b;
+            color: aliceblue;
+        }
+
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 69px;
+            background: linear-gradient(to bottom, rgba(182, 181, 243, 0.324), rgba(0, 0, 0, 0.7));
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav .left {
+            font-size: 28px;
+            color: rgb(183, 186, 10);
+        }
+
+        nav .right ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav .right ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: rgb(183, 186, 10);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Navigation - Logos */
+        nav .right ul li img {
+            width: 44px;
+            height: 44px;
+            transition: transform 0.3s ease;
+        }
+
+        nav .right ul li img:hover {
+            transform: scale(1.2);
+        }
+
+       
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-container .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+           
+            border-radius: 10px;
+        }
+
+
+        .skills-section {
+            text-align: center;
+            padding: 50px 0px;
+            background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(4, 12, 82, 0.7));
+            color: aliceblue;
+        }
+
+        .skills-section h1 {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        .skills-category {
+            margin: 30px 0;
+        }
+
+        .skills-category h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: rgb(183, 186, 10);
+        }
+
+        .skills-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 90px;
+        }
+
+        .skills-logo {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter: drop-shadow(0px 0px 20px rgb(154, 156, 83));
+            transition: transform 0.3s ease;
+        }
+
+        .skills-logo img {
+            width: 70%;
+            height: auto;
+        }
+
+        .skills-logo:hover {
+            transform: scale(1.2);
+        }
+
+        .projects-section {
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(4, 12, 82, 0.7));
+            text-align: center;
+        }
+
+        .projects-section h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: 50px;
+            color: aliceblue;
+            margin-bottom: 20px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 85%;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            filter: drop-shadow(0px 0px 20px rgba(255, 187, 0, 0.5));
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: calc(15% * 4);
+            animation: scroll 20s infinite linear;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            height: 200px;
+            font-size: 24px;
+            font-weight: bold;
+            border-right: 1px solid aliceblue;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-300%);
+            }
+        }
+        .aboutme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: rgb(255, 251, 7);
+    }
+    .sec{
+        color: orangered;
+    }
+
+    .aboutme img {
+        width: 190px; 
+        height: 190px;
+        border-radius: 50%; 
+        object-fit: cover;
+        border: 4px solid rgb(67, 17, 117); 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+        transition: transform 0.3s ease;
+    }
+
+    .aboutme img:hover {
+        transform: scale(1.1); 
+    }
+    /* Video gallery */
+    .video-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .video-item {
+        position: relative;
+        width: 200px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .video-item video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .video-item .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    /* Fullscreen video */
+    .fullscreen-video {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fullscreen-video:target {
+        display: flex;
+    }
+
+    .fullscreen-video video {
+        max-width: 90%;
+        max-height: 80%;
+    }
+
+    .fullscreen-video .project-title {
+        position: absolute;
+        bottom: 20px;
+        color: white;
+        font-size: 24px;
+    }
+
+    .fullscreen-video .close-fullscreen {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .fullscreen-video .close-fullscreen:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="left">Soyam's Portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="https://docs.google.com/document/d/1xbPw--AS4NkREXbdEs0f2WDoPBCFnMn5/edit?usp=sharing&ouid=103367807135334931316&rtpof=true&sd=true" target="_blank"><img src="resume-logo.svg" alt="Resume"></a></li>
+                <li><a href="https://www.linkedin.com/in/soyam-mohanty-0573031b7/" target="_blank"><img src="linkedin-logo.svg" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/SoyamM" target="_blank"><img src="github-logo.svg" alt="GitHub"></a></li>
+                <li><a href="contact.html"><img src="contact-logo.svg" alt="Contact"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+            <h1>Welcome to my Portfolio</h1>
+            <p>I am a passionate Developer with </p>
+                <p>expertise in bridging hardware and software innovation.</p>
+        </div>
+    </div> 
+    <h1 class="aboutme">Click the pic to know me <span class="sec">&nbsp; quick!</span></h1>
+    <section class="aboutme">
+       
+        <a href="aboutme.html" target="_blank">
+            <img src="soyam.svg" alt="myself">
+        </a>
+    </section>
+    <section class="skills-section">
+        <h1>Skills & Tools I Use</h1>
+
+       
+        <div class="skills-category">
+            <h2>Operating Systems</h2>
+            <div class="skills-logos">
+                <div class="skills-logo">
+                    <img src="windows-logo.svg" alt="Windows">
+                </div>
+                <div class="skills-logo">
+                    <img src="linux-logo.svg" alt="Linux">
+                </div>
+                <div class="skills-logo">
+                    <img src="ubuntu-logo.svg" alt="Ubuntu">
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h2>Software</h2>
+            <div class="skills-logos">
+                <div class="skills-logo">
+                    <img src="wireshark-logo.svg" alt="Wireshark">
+                </div>
+                <div class="skills-logo">
+                    <img src="jupyter-logo.svg" alt="Jupyter">
+                </div>
+                <div class="skills-logo">
+                    <img src="vscode-logo.svg" alt="VS Code">
+                </div>
+                <div class="skills-logo">
+                    <img src="mysql-logo.svg" alt="MySQL">
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="skills-category">
+            <h2>Programming Languages</h2>
+            <div class="skills-logos">
+                <div class="skills-logo">
+                    <img src="python-logo.svg" alt="Python">
+                </div>
+                <div class="skills-logo">
+                    <img src="Java-logo.svg" alt="Java">
+                </div>
+                <div class="skills-logo">
+                    <img src="C-logo.svg" alt="C">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="projects-section">
+        <h1>Projects</h1>
+        <p>Click on a video to view it full screen!</p>
+        <div class="video-gallery">
+            <div class="video-item">
+                <a href="#project1">
+                    <video muted> <!-- Added the "muted" attribute -->
+                        <source src="rad.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="overlay">Project 1</div>
+                </a>
+            </div>
+            <div class="video-item">
+                <a href="#project2">
+                    <video muted> <!-- Added the "muted" attribute -->
+                        <source src="carp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="overlay">Project 2</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <div id="project1" class="fullscreen-video">
+        <a href="#" class="close-fullscreen">×</a>
+        <video controls autoplay muted> <!-- Added "muted" attribute -->
+            <source src="rad.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="project-title">Project 1</div>
+    </div>
+    
+    <div id="project2" class="fullscreen-video">
+        <a href="#" class="close-fullscreen">×</a>
+        <video controls autoplay muted> <!-- Added "muted" attribute -->
+            <source src="carp.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="project-title">Project 2</div>
+    </div>
+    

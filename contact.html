@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        background-color: #0b132b;
+        color: aliceblue;
+    }
+
+    .contact-section {
+        text-align: center;
+        font-size: larger;
+        padding: 40px 100px;  
+    }
+
+    #name, #email, #message {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 5px solid #736673;
+        border-radius: 40px;
+    }
+
+    #message {
+        resize: vertical;
+    }
+
+    #submit {
+        background-color: #736673;
+        color: aliceblue;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+
+    #back a {
+        color: rgba(193, 255, 21, 0.617); /* Set link color to white */
+        font-size: larger;
+        text-decoration: none;
+    }
+
+</style>
+
+
+<body>
+    <p id="back"><a href="index.html">&#x21a9 Back to Home</a></p>
+  <div class="contact-section">
+    <h1>Contact Me</h1>
+    <p>Send me a message:</p>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" id="submit">Send</button>
+    </form> 
+    <p> </p> 
+    <p>Thank you for your message!</p>
+<P>I'll get back to you as soon as possible.
+    </p>
+</body>
+</html>
