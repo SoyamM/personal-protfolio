@@ -224,19 +224,20 @@
     }
     /* Video gallery */
     .video-gallery {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
     }
 
     .video-item {
         position: relative;
-        width: 200px;
-        height: 120px;
-        overflow: hidden;
-        border-radius: 10px;
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
     }
 
     .video-item video {
@@ -475,6 +476,16 @@
                 </a>
             </div>
         </div>
+        <div class="video-item">
+            <a href="#project3">
+                <video muted> <!-- Added the "muted" attribute -->
+                    <source src="autorov.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">Project 3</div>
+            </a>
+        </div>
+    </div>
     </section>
     
     <div id="project1" class="fullscreen-video">
@@ -494,4 +505,12 @@
         </video>
         <div class="project-title">Project 2</div>
     </div>
-    
+
+    <div id="project3" class="fullscreen-video">
+        <a href="#" class="close-fullscreen">×</a>
+        <video controls autoplay muted> <!-- Added "muted" attribute -->
+            <source src="autorov.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="project-title">Project 3</div>
+    </div>
