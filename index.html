@@ -302,49 +302,21 @@
     .fullscreen-video .close-fullscreen:hover {
         background: rgba(255, 255, 255, 0.5);
     }
-    @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                height: auto;
-                padding: 10px 20px;
-            }
-
-            nav .right ul {
-                flex-direction: row;
-                align-items:right;
-            }
-
-            nav .right ul li {
-                margin: 5px 0;
-            }
-
-            .video-container {
-                height: 60vh;
-            }
-
-            .video-container video {
-                height: auto;
-                max-height: 60vh;
-            }
-
-            .video-item {
-                width: 140px;
-                height: 80px;
-            }
-        }
-
+    
         @media (max-width: 480px) {
             nav {
                 padding: 10px 10px;
             }
 
             nav .right ul {
+                text-align: right;
+                display: flex;
                 flex-direction: row;
-                align-items: right;
             }
             nav .left{
                 flex-direction: row;
-                align-items: left;
+                text-align:left;
+                font-size: 20px;
             }
 
             nav .right ul li img {
@@ -353,7 +325,8 @@
             }
 
             .video-container {
-                height: 50vh;
+                width: 100%;
+                pointer-events: none;
             }
 
             .video-container .overlay-text {
@@ -362,9 +335,32 @@
             }
 
             .video-gallery .video-item {
-                width: 120px;
-                height: 70px;
+                width: 150px;
+                height: 80px;
             }
+            .aboutme{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .aboutme img{
+                width: 150px;
+                height: 150px;
+            }
+            .skills-section{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            
+            }
+            .skills-section h1{
+                font-size: 40px;
+            }
+            .overlay-text h1,p{
+                font-size: 19px;
+            }
+            
+            
         }
     </style>
 </head>
